@@ -1,0 +1,160 @@
+home
+    head
+        meta(name="viewport" , content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap")
+        title Corona
+    body
+        
+
+
+        div.container-fluid.main
+            //- div.first
+
+
+            //-     div.first_class
+            //-         div.first_class_one
+            //-             i.fa.fa-globe
+            //-         div.first_class_two
+            //-             p Global
+
+
+            //-     each val, index in countries
+            //-         div.first_class
+            //-             div.first_class_one
+            //-                 img(src=val.countryInfo.flag alt="flag", height = "20px", width = "20px")
+            //-             div.first_class_two
+            //-                 p= val.country
+
+
+            div.second
+                div.row
+                    div.bigBar.column.col-lg-7
+                        h2 GLOBAL DATA
+                        div.row
+                            div.globalFirst.column.col-sm-6
+                                div
+                                    h5 TOTAL CASES
+                                    p=global.cases
+                                div
+                                    h5 DEATHS
+                                    p=global.deaths
+                                div
+                                    h5 RECOVERED
+                                    p=global.recovered
+                            div.globalSecond.column.col-sm-6
+                                table.topCountries_main
+                                    
+                                    tr
+                                        th CRITICAL
+                                        td=global.critical 
+                                    tr
+                                        th TODAY CASES
+                                        td= global.todayCases
+                                    tr
+                                        th TODAY DEATHS
+                                        td= global.todayDeaths
+                                    tr
+                                        th ACTIVE
+                                        td= global.active
+                                    tr
+                                        th CRITICAL
+                                        td= global.critical
+                                    tr
+                                        th TESTS
+                                        td= global.tests
+                                    tr
+                                        th CASES PER ONE MILLION
+                                        td= global.casesPerOneMillion 
+                                    tr
+                                        th DEATHS PER ONE MILLION
+                                        td= global.deathsPerOneMillion  
+                                    tr
+                                        th TESTS PER MILLION
+                                        td= global.testsPerOneMillion
+                                
+
+                    //- this is for spacing
+
+                    div.col-lg-1  
+
+                    div.topCountries.column.col-lg-4
+                        h4 Top Cases
+                        table.topCountries_main
+                            tr  
+                                th Index
+                                th Country
+                                th Cases
+                           
+                            each val, index in sortedData.slice(0, 10)
+                                tr
+                                    td= index+1
+                                    td= val.country
+                                    td= val.cases
+            
+
+                div.searchBox  
+                    form(action="/search", method="GET")
+                        br
+                        input(type="search", name="country", minlength="3" placeholder="Enter country name to search")
+                        br
+                        br
+                        input(type="submit", value="Search").submitClass
+
+                div.third
+                     table.topCountries_main.anotherClass
+                        tr
+                            th Index
+                            th Country
+                            th Total cases
+                            th Total deaths
+                            th Today cases
+                            th Today deaths
+                            th Recovered
+                            th Active
+                            th Critical
+                            th Tests
+                            th Case / 1m
+                            th Deaths / 1m
+                            th Tests / 1m
+                        each val, index in sortedData
+                            tr
+                                td= index+1
+                                td 
+                                    a(href=`/data/${val.country}`)=val.country
+                                td= val.cases
+                                td= val.deaths
+                                td= val.todayCases
+                                td= val.todayDeaths
+                                td= val.recovered
+                                td= val.active
+                                td= val.critical
+                                td= val.tests
+                                td= val.casesPerOneMillion
+                                td= val.deathsPerOneMillion
+                                td= val.testsPerOneMillion
+
+
+
+
+
+
+        script(type="text/javascript")
+            include domEditing.js
+
+
+
+
+
+
+
+
+
+
+            

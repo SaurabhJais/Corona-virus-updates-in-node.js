@@ -1,0 +1,170 @@
+*{
+    font-family: "montserrat";
+    font-size: 20px;
+}
+.main{
+    display: flex;
+    margin: 0;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+/*---------------------------------- Global data and top country----------------------------------*/
+
+.second{
+    width: 100%;
+    background-color: rgb(250, 117, 117);
+}
+
+.second div.row{
+    margin: 0 20px;
+}
+
+
+/*----------------------------------Global data----------------------------------------------*/
+
+
+
+
+.bigBar{
+    margin-top: 20px;    
+    padding: 15px;
+    background-color: rgb(199, 235, 199);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 1px rgb(123, 41, 41);
+}
+
+.bigBar h2{
+   text-align: center;
+}
+
+.bigBar div.row{
+    margin-top: 30px;
+}
+
+
+.globalFirst h5{
+    font-size: 25px;
+    text-align: center;
+}
+
+.globalFirst p{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+/*-------------------------------- Top cases Table ---------------------------------------*/
+
+
+.topCountries{
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: rgb(199, 235, 199);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 1px rgb(123, 41, 41);
+    padding-bottom: 20px;
+ }
+
+
+
+.topCountries h4{
+  text-align: center;
+}
+
+.topCountries_main{
+     width: 100%;
+}
+
+
+.topCountries_main tr{
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+.topCountries_main tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+.topCountries_main td, .topCountries_main th{
+    border: 1px solid rgb(172, 171, 171);
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+/*----------------------------- Detailed View ---------------------------------*/
+
+.third{
+    height: 1000px;
+    margin: 20px;
+    background-color: rgb(199, 235, 199);
+    box-shadow: 1px 1px 4px 1px rgb(123, 41, 41);
+    padding: 20px;
+    border-radius: 10px;
+    padding-top: 0;
+    overflow: auto;
+}
+
+
+.anotherClass th{
+    background-color: rgb(199, 235, 199);
+    position: sticky !important;
+    top: 0px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*----------------------------- Form class -----------------------------------*/
+
+.searchBox{
+    text-align: center;
+}
+
+.searchBox form input{
+   height: 50px;
+   width: 80%;
+   outline: none;
+   border: none;
+   border-radius: 3px;
+   box-shadow: 1px 1px 4px 1px rgb(123, 41, 41);
+   padding-left: 5px;
+}
+
+.submitClass{
+    background-color: rgb(199, 235, 199);
+    color: black;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+/*------------------------------ Media queries --------------------------------*/
+
+@media screen and (max-width : 1100px){
+   .bigBar{
+       flex-direction: column;
+   }
+
+   .bigBar h1 {
+       display: none;
+   }
+    .second{
+        width: 100%;
+    }
+}

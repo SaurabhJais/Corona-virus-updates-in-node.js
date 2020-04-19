@@ -1,0 +1,46 @@
+*{
+    font-family: "Montserrat";
+}
+.main{
+    height: auto;
+    width: 100vw;
+}
+
+.first{
+    height: 350px;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.first img{
+    box-shadow: 1px 1px 4px 1px rgb(119, 102, 102);
+}
+
+.first h1{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.second{
+    text-align: center;
+}
+
+.second h1{
+    font-weight: bold;
+}
+
+.second table{
+    margin-top: 20px;
+    padding-top: 10px;
+    box-shadow: 1px 1px 4px 1px rgb(119, 102, 102);
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.second table th, .second table td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
